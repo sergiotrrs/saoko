@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plantilla</title>
+    <!-- CSS de bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- CSS font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="style.css" />
+    
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">CH18</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Música</a></li>
+                            <li><a class="dropdown-item" href="#">Fotos</a></li>
+                            <!-- <li><hr class="dropdown-divider"></li> -->
+                            <li><a class="dropdown-item" href="#">Recuerdos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Generation</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Descripción -->
+    <div class="container">
+        <!-- Descripción Generation -->
+        <div class="row">
+            <div class="col">
+                <h1>Estar en Generation</h1>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
+                    voluptas cumque unde reiciendis adipisci numquam ad qui minima
+                    explicabo eius eveniet officia neque, molestias culpa impedit. Porro
+                    explicabo molestiae expedita.
+                </p>
+                <p>
+                    <a href="https://mexico.generation.org/" target="_blank" class="btn btn-success">Visita
+                        Generation</a>
+                </p>
+            </div>
+        </div>
+        <!-- Descripción HTML, CSS, JS -->
+        <div class="row">
+            <div class="col-md-4">
+                <h2>HTML</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, ab ex unde distinctio quos suscipit dicta molestiae laborum alias explicabo velit facilis pariatur reiciendis veritatis, excepturi debitis aut necessitatibus vel.</p>
+                <p><a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" class="btn btn-success"><i class="fa fa-home"></i> Más sobre HTML</a> </p>
+            </div>
+            <div class="col-md-4">
+                <h2>CSS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, ab ex unde distinctio quos suscipit dicta molestiae laborum alias explicabo velit facilis pariatur reiciendis veritatis, excepturi debitis aut necessitatibus vel.</p>
+                <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="btn btn-success"><i class="fa-solid fa-heart"></i> Más sobre CSS</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>JS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, ab ex unde distinctio quos suscipit dicta molestiae laborum alias explicabo velit facilis pariatur reiciendis veritatis, excepturi debitis aut necessitatibus vel.</p>
+                <p>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" 
+                    target="_blank" 
+                    class="btn btn-success">
+                        <i class="fa-solid fa-star"></i> Más sobre JS</a></p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- Pié de página -->
+    <footer class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>Copyright 2022 Tutorial Bootstrap</p>   
+            </div>
+            <div class="col-md-6">
+                <a href="#" target="_blank" >Términos y condiciones</a>
+                <span> | </span>
+                <a href="#" target="_blank" >Políticas de privacidad</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Ola -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#198754" fill-opacity="1" d="M0,96L40,112C80,128,160,160,240,181.3C320,203,400,213,480,186.7C560,160,640,96,720,85.3C800,75,880,117,960,144C1040,171,1120,181,1200,181.3C1280,181,1360,171,1400,165.3L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+
+    <!-- JS de bootstrap -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
