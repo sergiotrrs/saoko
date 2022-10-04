@@ -135,3 +135,141 @@ console.log(getHowManyCharacters("Pepe Pecas Pica Papas pero", "e"))
 const buscarCaracter = (cadena, caracter) => cadena.split(caracter).length-1;
 
 console.log(buscarCaracter("Pepe Pecas Pica Papas pero", "e"));
+
+/* 'Pepe Pecas Pica Papas Pero'
+    .split("")
+    .filter( elemento => elemento ==='p' || elemento==='P')
+    .length; */
+//##################################################################################
+console.log("\n #####  Ciclo For #####")
+/**
+ * Sintaxis de ciclo for
+ *  for (inicio; condición; expresiónFinal ) {
+ *       instrucciones;
+ * }
+ */
+
+for (let i=0; i<10; ++i)
+  console.log("El valor de la iteración es: " + i);
+  //console.log("El valor de la iteración *1 = " + (i*2) );
+
+  // A) se imprime el valor de i y el doble 
+  // B) se produce un error (respuesta: por el scope de la variable)
+  // C) se imprime la iteración 10 veces y el doble de i una sola vez
+
+console.log("\n#####  For con continue y break ##### ");
+/**
+ *  La instrucción Break, rompe el ciclo for, no importa el n. de iteración en la que se encuentre.
+ *  La instrucción Continue, interrumpe la iteración en curso y continúa a la sig. iteración.
+ */
+let ch18 = ["Abelardo", "Audery", "Angel", "Sharon", "Bren", "Pato Lucas", "Victor", "Alex"];
+/* 
+for (let i=0; i< ch18.length ; i++){
+  if (ch18[i] === "Pato Lucas"){
+    console.warn("Atención, esta persona no pertenece a la CH18:" + ch18[i] );
+    break;
+  }
+  console.log("Persona de Ch18: " + ch18[i]);
+} */
+
+for (let i=0; i< ch18.length ; i++){
+  if( ch18[i] !== "Pato Lucas") {
+    continue;
+  }
+  console.warn("Atención, esta persona no pertenece a la CH18:" + ch18[i] );
+
+}
+
+console.log("\n#####  Matrices ##### ");
+
+//const generation = [ [] , [] , [] ];
+const generation = [ 
+  ["Abelardo" , "Audery" , "Angel"  , "Sharon"   , "Bren", "El bromas", "Victor", "Alex"] , 
+  ["Yosceline", "Mariana", "Karen"  , "Pedro"]   , 
+  ["Emiliano" , "Jonathn", "Esteban", "El bromas" , "José"]
+];
+
+//console.log("Próxima presentación :" +  generation[1][2]); //ESto apunta a Karen
+
+//Itear todos los elementos del arreglo:
+/* for(let i=0; i<generation.length;i++){
+  console.log(`Los integrantes de la corte ${i+1} son: `)
+  for(let j=0; j<generation[i].length;j++){
+      console.log(generation[i][j]);
+  }
+} */
+
+// Detectar a "El Bromas" e indicar con una alerta la cohorte donde se encuentra.
+continua_buscando:
+for (let i = 0; i < generation.length; i++) {
+  for (let j = 0; j < generation[i].length; j++) {
+    if(generation[i][j] === 'El bromas'){
+      console.warn(`El bromas se encuentra en la corte ${i} en la posicion ${j} `);
+      //continue continua_buscando;
+      break continua_buscando;
+    }
+    console.log(`Número de iteración ${i}-${j} `);
+  }
+}
+
+//################# Ciclo While ################
+console.log("\n#####  Cicho While ##### ");
+/**
+ * Sintaxis:
+ *        while (condición) {
+ *            instrucción;
+ *        }
+ */
+//Encontrar un número que pensé, del 1 al 10;
+/* let findNumber= true;
+let number = 1;
+while( findNumber){
+  number++;
+  if (confirm(`¿El número es ${number}?`) ){
+    findNumber= false ;
+    alert (`Fantástico, tu número es el ${number}`)
+  } 
+  else if( number>10) { 
+    findNumber= false ;
+    alert (`Humano, ya vete, no sbes jugar`);
+  }  
+} */
+/* let number = 1;
+while (confirm(`¿Tu número es diferente de ${number}?`)) {
+  number++;
+  if (number > 10) {
+    alert(`Humano, ya vete, no sabes jugar`);
+    break;
+  }
+}
+alert (`Fantástico, tu número es el ${number}`); */
+
+/**
+ * Sintaxis do-while
+ *   do{
+ * 
+ * } while( condicion );
+ * 
+ */
+let bandera = false;
+
+while( bandera){
+  console.log("Mensaje dentro del ciclo while");
+}
+//-----------------------------------------------
+// Muchas instrucciones
+//-------------------------------------------------
+let contador=0;
+do {
+  console.log("Mensaje dentro del do-while")  
+
+} while( ++contador<10  );
+
+//¿Cuántas veces se imprime? R: 10
+contador = 3;
+while( ++contador<10){
+  console.log("Valor de contador :" + contador);
+}
+console.log("Valor final de contador =" + contador);
+//¿ Cuantas veces se imprime en consola y cuál es el valor final de contador?  7 y 11
+//¿ Con preincremento?  6 y 10
