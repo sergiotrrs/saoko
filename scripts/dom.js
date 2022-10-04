@@ -5,6 +5,10 @@ console.log("Sesion JS06 Dom");
 //encontrarPorClase();
 encontrarPorSelector();
 
+crearElemento();
+cambiarEstilo();
+
+
 function encontrarPorId(){
     // Obtenemos el objeto a través de su ID
     const element = document.getElementById("titulo-h1");
@@ -42,3 +46,16 @@ function encontrarPorSelector(){
 
     elements[0].innerHTML = "ganas de comprar";
 }
+
+function cambiarEstilo(){
+    const elements = document.querySelectorAll("p>.color");
+    elements[0].style.color="red";
+    elements[1].style.color="green";
+}
+
+function crearElemento(){
+    const nuevoElemento = document.createElement("p");
+    nuevoElemento.innerHTML = `Este es un nuevo <strong class="color">párrafo</strong>` //<p></p>  <input value="cosits dentro del input">
+    document.getElementById("titulo").appendChild(nuevoElemento);
+}
+
