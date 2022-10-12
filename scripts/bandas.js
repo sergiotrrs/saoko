@@ -32,3 +32,5 @@ class Banda {
         this.#nParticipantes = nuevoNumero;
     }
 }
+
+export {Banda};
